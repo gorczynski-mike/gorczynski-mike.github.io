@@ -22,8 +22,6 @@ $(document).ready(function() {
 
   function handleDatatableRender(data) {
 
-    window.alert("handle datatable render");
-
     tasksContainer.empty();
     data.forEach(function(task) {
       createElement(task).appendTo(tasksContainer);
@@ -32,8 +30,6 @@ $(document).ready(function() {
 
   function getAllTasks() {
     var requestUrl = apiRoot + 'getTasks';
-
-    window.alert("get all tasks method");
 
     $.ajax({
       url: requestUrl,
